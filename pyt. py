@@ -1,0 +1,19 @@
+import turtle
+import colorsys
+
+# Screen setup
+screen = turtle.Screen()
+screen.bgcolor("black")
+t = turtle.Turtle()
+t.speed(0)
+
+# Drawing logic
+h = 0
+for i in range(150):
+    c = colorsys.hsv_to_rgb(h, 1, 1)
+    t.pencolor(c)
+    h += 0.005
+    t.forward(i * 2)
+    t.right(91)
+
+turtle.done()
